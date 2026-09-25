@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SwiftBar plugin showing the average battery discharge rate over 30 days."""
+"""SwiftBar plugin showing the average battery discharge rate"""
 
 from __future__ import annotations
 
@@ -98,14 +98,14 @@ def print_menu(
     percentage: int, is_charging: bool, rate: float | None, history: list[dict[str, Any]]
 ) -> None:
     status = "Charging" if is_charging else "Discharging"
-    print(f"Charging {percentage}%" if is_charging else format_rate(rate))
+    print(f" 🔌" if is_charging else format_rate(rate))
     print("---")
-    print(f"Battery: {percentage}%")
-    print(f"Status: {status}")
-    print(f"30-day average discharge: {format_rate(rate)}")
-    print(f"Samples: {len(history)}")
+    print(f"Batt: {percentage}%")
+    print(f"Stat: {status}")
+   # print(f"30d avg discharge: {format_rate(rate)}")
+    #print(f"Samples: {len(history)}")
     print("---")
-    print("History is stored locally for 30 days.")
+    print("author: StavrUA")
 
 
 def main() -> int:
@@ -118,7 +118,7 @@ def main() -> int:
         print_menu(percentage, is_charging, discharge_rate(history), history)
         return 0
     except (OSError, subprocess.CalledProcessError, RuntimeError) as error:
-        print("Battery unavailable")
+        print("Batt unavailable")
         print("---")
         print(f"Error: {error}")
         return 1
