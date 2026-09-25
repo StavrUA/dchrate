@@ -1,6 +1,6 @@
-# dchrate
+# DisChargeRate
 
-`dchrate` is a [SwiftBar](https://swiftbar.app/) plugin for macOS. Copy
+`dchrate` (or `DisChargeRate`) is a [SwiftBar](https://swiftbar.app/) plugin for macOS. Copy
 the script into SwiftBar's plugin folder (example)
 
 ```sh
