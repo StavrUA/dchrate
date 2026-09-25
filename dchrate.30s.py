@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SwiftBar plugin showing the average battery discharge rate (5 min refresh)."""
+"""SwiftBar plugin showing the average battery discharge rate (30 sec refresh)."""
 
 from dchrate_core import main
 
